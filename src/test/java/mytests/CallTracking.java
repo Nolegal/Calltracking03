@@ -36,16 +36,7 @@ public class CallTracking {
 
     @Test(dataProvider = "testdata")
     public static void Caltracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
-      //  System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-       //   WebDriver driver=new ChromeDriver();
-
-/*
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-*/
 
 
 
@@ -64,7 +55,7 @@ public class CallTracking {
        // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
        // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//div[@class=\"header__buttons header__buttons--mobile\"]//a[@data-target=\"#demoModal\"]")).click();
+        driver.findElement(By.className("header-buttons-inner__text")).click();
 
         Thread.sleep(3000);
 
@@ -180,3 +171,16 @@ public class CallTracking {
     }
 
 }
+
+
+
+//    System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+
+//      WebDriver driver=new ChromeDriver();
+
+/*
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+*/
