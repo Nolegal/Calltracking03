@@ -55,7 +55,7 @@ public class CallTracking {
         //driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
        // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
        // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
         driver.findElement(By.className("header-buttons-inner__text")).click();
 
         Thread.sleep(3000);
