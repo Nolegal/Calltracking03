@@ -35,7 +35,7 @@ public class CallTracking {
 
 
     @Test(dataProvider = "testdata")
-    public static void Caltracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
+    public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
 
 
 
@@ -48,6 +48,8 @@ public class CallTracking {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
+
+        Logger log= LogManager.getLogger();
 
         driver.get("https://calltracking.ru/");
 
@@ -86,7 +88,7 @@ public class CallTracking {
 
 
 
-        Logger log= LogManager.getLogger();
+
 
 
         ((JavascriptExecutor) driver).executeScript("window.open()");
