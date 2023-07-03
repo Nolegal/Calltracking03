@@ -38,19 +38,27 @@ public class CallTracking {
     @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
 
+        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+
+        WebDriver driver=new ChromeDriver();
+
+
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
 
 
+       //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
-         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+      //  WebDriver driver;
 
-        WebDriver driver;
+      //  ChromeOptions options = new ChromeOptions();
+     //   options.addArguments("headless");
+    //    driver = new ChromeDriver(options);
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        driver = new ChromeDriver(options);
-
-        Logger log= LogManager.getLogger();
+     //   Logger log= LogManager.getLogger();
 
         driver.get("https://calltracking.ru/");
 
@@ -117,8 +125,8 @@ public class CallTracking {
 
 
                     String phone = (String) tutorials.get("quest_phone4");
-                    System.out.println(phone);
-                    log.info(phone);
+                    //System.out.println(phone);
+                    log.info(phone+"Если вы видите введеный номер то тест прошел успешно. Если нет, то прйдите тест заново");
 
 
             }
