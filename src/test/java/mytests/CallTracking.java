@@ -33,12 +33,12 @@ import java.util.concurrent.TimeUnit;
 
 public class CallTracking {
 
-
+   public static Logger log= LogManager.getLogger();
     @Test(dataProvider = "testdata")
     public static void Caltracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
-        //System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-         // WebDriver driver=new ChromeDriver();
+          WebDriver driver=new ChromeDriver();
 
 /*
         driver.manage().window().maximize();
@@ -47,7 +47,7 @@ public class CallTracking {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 */
 
-
+/*
 
          System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
@@ -56,7 +56,7 @@ public class CallTracking {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
-
+*/
         driver.get("https://calltracking.ru/");
 
         driver.manage().window().maximize();
@@ -122,8 +122,8 @@ public class CallTracking {
 
 
                     String phone = (String) tutorials.get("quest_phone4");
-                    System.out.println(phone);
-                    log.info(phone);
+                   // System.out.println(phone);
+                    log.info(phone+"Если вы видете введенный номер телефона, значит тест прошел успешно.Если нет, значит пройдите тест заново.");
 
 
             }
