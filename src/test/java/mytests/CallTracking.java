@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CallTracking {
 
-
+    protected static Logger log = LogManager.getLogger();
     @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException, Exception{
 
