@@ -63,9 +63,9 @@ public class CallTracking {
         driver.get("https://calltracking.ru/");
 
         //driver.manage().window().maximize();
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(8000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/nav[1]/div[2]/div[1]/button[1]/span[1]")).click();
 
