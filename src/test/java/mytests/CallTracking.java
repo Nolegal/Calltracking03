@@ -56,7 +56,7 @@ public class CallTracking {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(3000);
-        driver.findElement(By.className("header-buttons-inner__text")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/nav[1]/div[2]/div[1]/button[1]/span[1]")).click();
 
         Thread.sleep(3000);
 
@@ -73,7 +73,7 @@ public class CallTracking {
         driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).click();
         driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys(telephone);
 //7777777777
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
          driver.findElement(By.xpath("//button[contains(text(),'Получить демо-доступ')]")).click();
 
