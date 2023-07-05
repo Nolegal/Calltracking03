@@ -144,7 +144,7 @@ public class CallTracking {
 
                 String phone = (String) tutorials.get("quest_phone4");
                 //System.out.println(phone);
-                log.info(phone + "Если вы видите введеный номер то тест прошел успешно. Если нет, то прйдите тест заново");
+                log.info(phone + "Если вы видите введеный номер то тест прошел успешно. Если нет, то пройдите тест заново");
 
 
             }
