@@ -96,7 +96,7 @@ public class CallTracking extends  BaseClass{
         // driver.findElement(By.className("demo_access_form")).findElement(By.className("email_validation")).sendKeys("test@i.ua");
 
         driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).click();
-        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys( telephone);
+        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys(telephone);
 //7777777777
         Thread.sleep(5000);
 
