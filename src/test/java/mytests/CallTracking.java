@@ -50,7 +50,7 @@ public class CallTracking extends  BaseClass{
 
 
     @Test
-    public static void callTracking03() throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
+    public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
 
        // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
@@ -86,7 +86,7 @@ public class CallTracking extends  BaseClass{
         Thread.sleep(3000);
 
         driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).click();
-        driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).sendKeys("Тест");
+        driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).sendKeys(name);
 
 
         //driver.findElement(By.xpath("/html[1]/body[1]/div[9]/div[1]/div[1]/div[2]/form[1]/input[7]")).click();
@@ -96,7 +96,7 @@ public class CallTracking extends  BaseClass{
         // driver.findElement(By.className("demo_access_form")).findElement(By.className("email_validation")).sendKeys("test@i.ua");
 
         driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).click();
-        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys( "1111111111");
+        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys( telephone);
 //7777777777
         Thread.sleep(5000);
 
@@ -175,7 +175,7 @@ public class CallTracking extends  BaseClass{
     }
 
 
-/*
+
     @DataProvider(name="testdata")
     public Object[][] TestDataFeed() {
 
@@ -190,7 +190,7 @@ public class CallTracking extends  BaseClass{
 
         return calltrackingdata;
     }
-*/
+
 }
 
 /*
