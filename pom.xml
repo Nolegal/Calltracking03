@@ -7,6 +7,10 @@
     <groupId>org.example</groupId>
     <artifactId>untitled3</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>untitled3</name>
+    <url>http://maven.apache.org</url>
 
     <distributionManagement>
         <repository>
