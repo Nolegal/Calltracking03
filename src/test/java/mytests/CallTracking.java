@@ -33,37 +33,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class CallTracking extends  BaseClass{
+public class CallTracking {
 
-    public CallTracking(){
-        super();
-
-    }
-
-    @AfterClass
-    public static void closeBrowser(){
-        driver.quit();
-
-        driver=null;
-    }
-
-
-
-    @Test
+    //protected static Logger log = LogManager.getLogger();
+    @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
 
-       // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+      //  System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-     //   WebDriver driver=new ChromeDriver();
-
-
-     //   driver.manage().window().maximize();
-     //   driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-     //   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-     //   driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+      //  WebDriver driver=new ChromeDriver();
 
 
-/*
+        //driver.manage().window().maximize();
+       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+
+
          System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         WebDriver driver;
@@ -71,18 +58,18 @@ public class CallTracking extends  BaseClass{
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
-*/
+
         //   Logger log= LogManager.getLogger();
 
-        navigateToURL("https://calltracking.ru/");
+        driver.get("https://calltracking.ru/");
 
-      //  driver.manage().window().maximize();
+       // driver.manage().window().maximize();
        // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
        // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
        // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(3000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/nav[1]/div[2]/div[1]/button[1]/span[1]")).click();
-       // driver.findElement(By.xpath("//span[contains(text(),'Посмотреть демо')]")).click();
+
         Thread.sleep(3000);
 
         driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).click();
@@ -131,11 +118,12 @@ public class CallTracking extends  BaseClass{
 
     }
 
-    @Test public static void keys() throws Exception {
-     //   System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-       // WebDriver driver=new ChromeDriver();
-        navigateToURL("https://calltracking.ru/usefull_scripts/last_form_data.php?token=7pLdXq0Ri9fZkTm6SoVnMl2NjYhAeWxP&json=1");
+    @Test public static void keys() throws Exception {
+        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://calltracking.ru/usefull_scripts/last_form_data.php?token=7pLdXq0Ri9fZkTm6SoVnMl2NjYhAeWxP&json=1");
     }
     @Test public static void parsing() throws InterruptedException, IOException, ParseException,MalformedURLException {
         Logger log = LogManager.getLogger();
@@ -175,7 +163,6 @@ public class CallTracking extends  BaseClass{
     }
 
 
-
     @DataProvider(name="testdata")
     public Object[][] TestDataFeed() {
 
@@ -190,6 +177,11 @@ public class CallTracking extends  BaseClass{
 
         return calltrackingdata;
     }
+
+
+
+
+
 
 }
 
