@@ -49,8 +49,8 @@ public class CallTracking extends  BaseClass{
 
 
 
-   // @Test(dataProvider = "testdata")
-    public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
+    @Test
+    public static void callTracking03() throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
 
        // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
@@ -76,10 +76,10 @@ public class CallTracking extends  BaseClass{
 
         navigateToURL("https://calltracking.ru/");
 
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+      //  driver.manage().window().maximize();
+       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(3000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/nav[1]/div[2]/div[1]/button[1]/span[1]")).click();
        // driver.findElement(By.xpath("//span[contains(text(),'Посмотреть демо')]")).click();
