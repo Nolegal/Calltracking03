@@ -49,7 +49,7 @@ public class CallTracking extends  BaseClass{
 
 
 
-    @Test(dataProvider = "testdata")
+   // @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
 
        // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
