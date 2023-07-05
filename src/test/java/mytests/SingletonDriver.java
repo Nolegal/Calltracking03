@@ -11,9 +11,9 @@ public class SingletonDriver {
 
     public static WebDriver getSingletonInstance() {
         if (null == driver) {
-           System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-              driver = new ChromeDriver();
-/*
+        //   System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+         //     driver = new ChromeDriver();
+
             System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
 
@@ -21,7 +21,7 @@ public class SingletonDriver {
             options.addArguments("headless");
             driver= new ChromeDriver(options);
 
- */
+
         }
         return driver;
     }
