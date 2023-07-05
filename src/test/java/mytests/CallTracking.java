@@ -131,7 +131,7 @@ public class CallTracking extends  BaseClass{
 
     }
 
-     public static void keys() throws Exception {
+    @Test public static void keys() throws Exception {
      //   System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
        // WebDriver driver=new ChromeDriver();
