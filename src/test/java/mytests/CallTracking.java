@@ -46,8 +46,8 @@ public class CallTracking {
 
 
 
-        // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+       // WebDriverManager.chromedriver().setup();
         WebDriver driver;
 
         ChromeOptions options = new ChromeOptions();
@@ -115,8 +115,8 @@ public class CallTracking {
 
 
     @Test public static void keys() throws Exception {
-        //System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+      //  WebDriverManager.chromedriver().setup();
         WebDriver driver;
 
         ChromeOptions options = new ChromeOptions();
