@@ -38,18 +38,18 @@ public class CallTracking {
     //protected static Logger log = LogManager.getLogger();
     @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
+/*
+        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
-      //  System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-
-       //WebDriver driver=new ChromeDriver();
-
-
-        //driver.manage().window().maximize();
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+       WebDriver driver=new ChromeDriver();
 
 
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+*/
 
          System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
@@ -63,17 +63,17 @@ public class CallTracking {
 
         driver.get("https://calltracking.ru/");
 
-       // driver.manage().window().maximize();
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-       // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         Thread.sleep(3000);
        // driver.findElement(By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/nav[1]/div[2]/div[1]/button[1]/span[1]")).click();
-        driver.findElement(By.xpath("//button[contains(text(),'Посмотреть демо')]")).click();
-        Thread.sleep(3000);
+      //  driver.findElement(By.xpath("//button[contains(text(),'Посмотреть демо')]")).click();
+     //   Thread.sleep(3000);
 
-        driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).click();
-        driver.findElement(By.className("demo_access_form")).findElement(By.id("first_step_name")).sendKeys(name);
+        driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[2]/form[1]/input[6]")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[2]/form[1]/input[6]")).sendKeys(name);
 
 
         //driver.findElement(By.xpath("/html[1]/body[1]/div[9]/div[1]/div[1]/div[2]/form[1]/input[7]")).click();
@@ -82,12 +82,12 @@ public class CallTracking {
         // driver.findElement(By.className("demo_access_form")).findElement(By.className("email_validation")).click();
         // driver.findElement(By.className("demo_access_form")).findElement(By.className("email_validation")).sendKeys("test@i.ua");
 
-        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).click();
-        driver.findElement(By.xpath("//body/div[@id='demoModal']/div[1]/div[1]/div[2]/form[1]/input[8]")).sendKeys(telephone);
+        driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[2]/form[1]/input[7]")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[2]/form[1]/input[7]")).sendKeys(telephone);
 //7777777777
         Thread.sleep(5000);
 
-        driver.findElement(By.xpath("//button[contains(text(),'Получить демо-доступ')]")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[4]/div[1]/div[1]/div[1]/div[2]/form[1]/button[1]")).click();
 
 
 
@@ -120,9 +120,13 @@ public class CallTracking {
 
 
     @Test public static void keys() throws Exception {
-        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver;
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        driver = new ChromeDriver(options);
         driver.get("https://calltracking.ru/usefull_scripts/last_form_data.php?token=7pLdXq0Ri9fZkTm6SoVnMl2NjYhAeWxP&json=1");
     }
     @Test public static void parsing() throws InterruptedException, IOException, ParseException,MalformedURLException {
@@ -142,7 +146,7 @@ public class CallTracking {
                 JSONObject tutorials = (JSONObject) o;
 
 
-                String phone = (String) tutorials.get("quest_phone4");
+                String phone = (String) tutorials.get("quest_phone3");
                 //System.out.println(phone);
                 log.info(phone + "Если вы видите введеный номер то тест прошел успешно. Если нет, то пройдите тест заново");
 
