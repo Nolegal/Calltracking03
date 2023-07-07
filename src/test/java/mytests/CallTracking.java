@@ -38,18 +38,10 @@ public class CallTracking {
     //protected static Logger log = LogManager.getLogger();
     @Test(dataProvider = "testdata")
     public static void callTracking03(String name, String telephone) throws InterruptedException, IOException, ParseException,MalformedURLException, Exception{
-/*
-        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-
-       WebDriver driver=new ChromeDriver();
 
 
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
-*/
+
 
          System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
