@@ -1,4 +1,6 @@
 package mytests;
+
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -43,7 +45,7 @@ public class CallTracking {
 
 
 
-         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+         System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
         WebDriver driver;
 
@@ -112,7 +114,7 @@ public class CallTracking {
 
 
     @Test public static void keys() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
 
         WebDriver driver;
 
