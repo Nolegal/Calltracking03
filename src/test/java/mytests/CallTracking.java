@@ -1,6 +1,7 @@
 package mytests;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -45,13 +46,13 @@ public class CallTracking {
 
 
 
-         System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-
+        // System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver;
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        driver = new ChromeDriver(options);
+       driver = new ChromeDriver(options);
 
         //   Logger log= LogManager.getLogger();
 
@@ -114,8 +115,8 @@ public class CallTracking {
 
 
     @Test public static void keys() throws Exception {
-        System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
-
+        //System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver;
 
         ChromeOptions options = new ChromeOptions();
